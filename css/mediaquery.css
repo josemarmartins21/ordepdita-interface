@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+
+/* Estilo para desktops */
+
+@media screen and (min-width: 992px) {
+
+/* Cabeçalho do site */
+    body {
+        width: 100%;
+
+    }
+
+    header > div#cx1 {
+        flex: 0 1 110px;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    header > div#cx2 {
+        display: block;
+        display: flex;
+        flex: 0 1 1000px;
+        justify-content: space-evenly;
+
+    }
+
+    header > div#cx2 > p {
+        height: 20px;
+        width: 5px;
+        background-color: white;
+    
+    }
+
+    header > div#cx2 > button {
+        background-color: var(--cor-de-destaque);
+        color: white;
+        border: none;
+        font-weight: 250;
+        cursor: pointer;
+        text-transform: uppercase;
+        
+        
+    }
+
+    header > div#cx3 {
+        flex: 0 1 200px;
+    }
+
+    
+
+    header > div.menu {
+        display: none;
+    }
+ /* Cabeçalho das subssecções */   
+
+ div#inscricao-titulo h2 {
+    width: 80%;
+    margin: auto;
+ }
+
+
+/* Secção de serviços */
+    section#seccao-servicos {
+        margin-top: 35px;
+        margin-bottom: 140px;
+    }
+
+    div#servicos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin-top: 30px;
+        height: auto;
+    
+    }
+
+    .item {
+        height: 160px;
+        
+    }
+
+    .item:hover {
+        background-color: var(--cor-tercearia);
+        color: white;
+        transition: background-color .5s;
+    }
+
+/* 
+    Estás são as subsecções da secção de seriços
+*/
+
+/* Secção de requisitos */
+
+section#inscricao {
+    padding-bottom: 180px;
+}
+
+section#card-info > article {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+section#card-info > article > .card-requisitos {
+    flex-basis: 350px;
+}
+
+.card-requisitos  > h3 {
+    margin-bottom: 10px;
+}
+
+section#card-info article ul li {
+    line-height: 1.4em;
+    
+}
+
+/* Secção de inscrição */
+
+section#ofa > form {
+    width: 72%;
+    margin: auto;
+}
+
+div#dados-pessoais, div#endereco_actual {
+    flex-flow: row wrap;
+    gap: 10px;
+
+}
+
+div.form-group {
+    flex: 0 1 auto;
+    
+}
+
+div#btn > input[type=submit]{
+    cursor: pointer;
+}
+
+.form-file {
+    width: 330px;
+    text-align: left;
+}
+
+div#dados-pessoais > .form-group > input, div#endereco_actual > .form-group > input, select {
+    width: 330px;
+    padding: .5em;
+    font-size: 1em;
+    
+}
+
+div.form-file {
+    width: 365px;
+    padding: 1.2em; 
+    font-size: 1em;
+}
+
+
+/* Secção de inscrição */
+
+section#inscricao {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    
+}
+
+div.inscricao-item {
+    flex: 0 1 auto;
+} 
+
+div#inscricao-link {
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+a.card-inscricao {
+    width: 400px;
+    display: inline-block;
+}
+
+/* Secção de atualização de dados */
+
+.btn-s {
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+
+}
+
+.btn-s > input[type=submit] {
+    cursor: pointer;
+}
+
+/* Notícias */
+
+    div#card-noticias {
+        justify-content: space-evenly;
+    }
+    section#noticias {
+        margin-bottom: 150px;
+    }
+
+/* Secção agendar visitas */
+    div#mapa-do-mundo {
+    height: 400px;
+    background: url(../img/mapa-do-mundo.png) no-repeat left center;
+    background-size: cover;
+}
+   
+
+/* Secção de links */
+
+
+/* Footer */
+
+#informacoes {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    
+}
+
+.infor {
+    flex: 1;
+}
+
+.infor > ul > li {
+    line-height: 1.5em;
+}
+
+}
+
+
+
+/* Estilo para tablets */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+     
+    /* Cabeçalho das subssecções */   
+
+    div#inscricao-titulo h2 {
+        width: 80%;
+        margin: auto;
+    }
+
+    div#servicos {
+        flex-flow: column nowrap;
+        gap: 20px;
+        width: 60%;
+        margin: 0px auto;
+        
+    }
+    #incricao-titulo-2 > h1 {
+        text-align: center;
+    }
+
+   /* Secção de requisitos */
+
+    section#inscricao {
+        padding-bottom: 180px;
+    }
+
+    section#card-info > article {
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    section#card-info > article > .card-requisitos {
+        flex-basis: 350px;
+    }
+
+    .card-requisitos  > h3 {
+        margin-bottom: 10px;
+    }
+
+    section#card-info article ul li {
+        line-height: 1.4em;
+        
+    }
+
+    /* Secção de inscrição */
+
+    div#dados-pessoais, div#endereco_actual {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+
+    .form-group {
+       flex-grow: 1; 
+       width: auto;
+    }
+
+    /* Secção de atualização de dados */
+    #atualizacao-dados {
+        padding-bottom: 200px;
+    }
+    .btn-s {
+        width: 500px;
+        margin: 20px auto;
+        text-align: center;
+
+    }
+
+    .btn-s > input[type=submit] {
+        cursor: pointer;
+    }
+
+   
+}

@@ -21,7 +21,7 @@ body {
 
 }
 
-/*Cebeçalho do site*/
+/* Cebeçalho do site */
 
 header {
     background-color: var(--cor-de-destaque);
@@ -29,9 +29,10 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 1px 14px rgba(0, 0, 0, 0.301);
-    position: fixed;
-    width: 100vw;
+    position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 
 
@@ -71,31 +72,38 @@ div.menu > ion-icon {
 }
 
 
-/*Conteudo principal do site*/
+/* Conteudo principal do site */
 
-
-/*Hero (carrossel de imagens)*/
 #hero {
-    height: 65vh;
+    height: 80vh;
     background-color: black;
     margin-bottom: 30px;
 }
 
-/*Serviços*/
+/* Serviços */
+
+section#seccao-servicos > h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
 
 main h1 {
     text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+
 }
 
-section#servicos {
+div#servicos {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    height: 620px;
+    height: 600px;
     
 }
 
-.item {
+a.item {
     flex: 0 1 321px;
     outline: 2px solid var(--cor-tercearia);
     border-radius: 15px;
@@ -103,17 +111,15 @@ section#servicos {
     margin: 0px 0px 20px 0px;
     text-align: center;
     color: var(--cor-de-destaque);
-    transition: .3s;
+    text-decoration: none;
+    
     
 }
 
 .item:active {
     background-color: #22547379;
     color: white;
-}
-
-.item:active:hover {
-    
+    transition: background-color .5s;
 }
 
 ion-icon {
@@ -125,7 +131,7 @@ ion-icon {
     text-transform: uppercase;
 }
 
-/*Secção de atualizações*/
+/* Secção de atualizações */
 
 #noticias > h1 {
     text-align: center;
@@ -138,7 +144,18 @@ ion-icon {
     align-items: center;
     justify-content: space-between;
     height: 400px;
+    margin-left: 10px;
 }
+
+div#card-noticias {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    width: 80%;
+    margin: auto;
+}
+
+
 
 div#card-1 {
     border-radius: 15px;
@@ -178,7 +195,7 @@ p#p1 {
     background-color: var(--cor-de-destaque);
 }
 
-/*Agendar visitas*/
+/* Agendar visitas */
 
 section#agendar-visitas {
     background-color: var(--cor-secundaria);
@@ -210,11 +227,7 @@ section#agendar-visitas > a {
     text-transform: uppercase;
 }
 
-/*Secção de links*/
-
-section#links {
-    
-}
+/* Secção de links */
 
 div#mapa-do-mundo {
     height: 200px;
@@ -222,16 +235,204 @@ div#mapa-do-mundo {
     background: url(../img/mapa-do-mundo.png) no-repeat left center;
     background-size: cover;
 }
+/* Requisitos informações */
+
+#card-info {
+    padding: 0px 1.3em;
+}
+
+#card-info > p {
+    text-align: center;
+    margin-bottom: 2em;
+}
+article {
+    margin-bottom: 2em;
+} 
+#info-hr {
+    margin: 2em 0px;
+}
+
+#card-info > article > h3 {
+    margin: .7em 0px;
+    
+}
+
+section#card-info article ul li {
+    margin-bottom: .5em;
+    list-style-position: inside;
+    
+}
+
+/* Secção de select-Inscricao */
+
+section#inscricao {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-evenly;
+    margin-bottom: 2em;
+
+}
+
+div#inscricao-titulo {
+    margin: 3em 0px;
+}
+
+div#inscricao-titulo h2 {
+    margin-left: 45px;
+}
+
+#hr-azul {
+    width: 80%;
+    margin: 0px auto;
+    background-color: var(--cor-de-destaque);
+    padding: 2.5px;
+    margin-top: 10px;
+
+}
+
+div.inscricao-item {
+    flex: 1 1 328px;
+   
+}
+
+div#incricao-titulo {
+    margin-bottom: 30px;
+}
+
+div#incricao-titulo-2 {
+    margin-bottom: 7em;
+}
+
+div#incricao-titulo-2 > h1 {
+    text-align: center;
+}
+
+div#inscricao-link {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+}
+
+a.card-inscricao {
+    outline: 2px solid var(--cor-tercearia);
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    color: var(--cor-de-destaque);
+    text-decoration: none;
+    width: 90%;
+    padding: 45px;
+    
+}
+
+/* Secção inscrição */
+
+section#ofa {
+    margin-bottom: 3em;
+}
+
+section#ofa h1 {
+    text-align: center;
+    padding: 1em 0px;
+    margin-bottom: 2em;
+}
+
+div#dados-pessoais, div#endereco_actual {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+div#dados-pessoais > .form-group > input, div#endereco_actual > .form-group > input, select {
+    width: 365px;
+    padding: 1.2em;
+    outline: .5px solid rgba(0, 0, 0, 0.295);
+    border: none;
+    font-size: 1em;
+    
+}
 
 
 
+div#btn {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 1.5em;
+    
+}
+
+div#btn > input[type=submit], div#btn > a  {
+    width: 80px;
+    background-color: var(--cor-de-destaque);
+    color: white;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 5px 13px rgba(0, 0, 0, 0.322);
+    
+}
+
+div#btn > a {
+    background-color: var(--cor-tercearia);
+    text-decoration: none;
+    text-align: center;
+}
 
 
 
+.form-group {
+    margin: 10px 0px;
+}
 
+/* Secção de atualização de dados */
 
+#atualizacao-dados {
+    padding: 15px;
+}
 
-/*Footer do site*/
+#atualizacao-dados > h1, #atualizacao-dados > h3 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.atualizacao-card {
+    text-align: center;
+    margin-bottom: 1em;
+    
+}
+
+.atualizacao-card > input[type=text]{
+    width: 310px;
+    padding: .4em;
+    outline: .5px solid rgba(0, 0, 0, 0.295);
+    border: none;
+    font-size: 1em;
+
+}
+
+.btn-s {
+    text-align: right;
+    width: 90%;
+}
+
+.btn-s > input[type=submit] {
+    width: 80px;
+    background-color: var(--cor-de-destaque);
+    color: white;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 5px 13px rgba(0, 0, 0, 0.322);
+
+}
+
+/* Footer do site */
 
 div#informacoes {
     background-color: var(--cor-footer);
